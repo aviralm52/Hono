@@ -1,16 +1,17 @@
 {
-  "name": "hono",
-  "scripts": {
-    "dev": "bun run --hot src/index.ts",
-    "build": "esbuild src/index.ts --bundle --outfile=dist/bundle.js --minify"
-  },
-  "dependencies": {
-    "@hono/node-server": "^1.13.7",
-    "hono": "^4.6.12",
-    "mongoose": "^8.8.3"
-  },
-  "devDependencies": {
-    "@types/bun": "^1.1.14",
-    "esbuild": "^0.24.0"
-  }
+    "name": "hono",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "frontend": "cd frontend && npm run dev",
+        "backend": "cd backend && cd src && npm run dev",
+        "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+    },
+    "devDependencies": {
+        "concurrently": "^7.0.0"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }

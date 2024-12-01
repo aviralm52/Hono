@@ -1,0 +1,18 @@
+{
+    "name": "hono",
+    "type": "module",
+    "scripts": {
+        "dev": "bun run --hot src/index.ts",
+        "build": "esbuild src/index.ts --bundle --outfile=dist/bundle.js --minify"
+    },
+    "dependencies": {
+        "@hono/node-server": "^1.13.7",
+        "hono": "^4.6.12",
+        "mongoose": "^8.8.3"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.1.14",
+        "concurrently": "^9.1.0",
+        "esbuild": "^0.24.0"
+    }
+}
